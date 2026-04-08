@@ -1,21 +1,24 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-characterfilter',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './characterfilter.html',
   styleUrl: './characterfilter.css'
 })
-export class Characterfilter {
+export class Characterfilter implements OnInit {
   houses: string[] = ['Gryffindor', 'Slytherin', 'Hufflepuff', 'Ravenclaw'];
-  selectedHouse: string = '';
+
+  houseControl = new FormControl('');
 
   @Output() houseSelected = new EventEmitter<string>();
 
-  onHouseChange(): void {
-    this.houseSelected.emit(this.selectedHouse);
+  ngOnInit(): void {
+    this.houseControl.valueChanges.subscribe((value) => {
+      this.houseSelected.emit(value ?? '');
+    });
   }
 }
