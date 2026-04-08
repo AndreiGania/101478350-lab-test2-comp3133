@@ -1,6 +1,6 @@
-# ☕ Harry Potter Character Explorer
+# Harry Potter Character List
 
-## 📱 App Description
+## App Description
 
 This is an Angular-based web application that allows users to explore Harry Potter characters using a public API. The application displays a list of characters, allows filtering by Hogwarts house, and shows detailed information for a selected character.
 
@@ -32,13 +32,21 @@ The app demonstrates modern Angular features including standalone components, se
 
 Displays all characters with their name, image, and house.
 
+<img width="1904" height="936" alt="image" src="https://github.com/user-attachments/assets/24d61d63-3255-456e-b9f4-0b2d80025fb7" />
+
 ### 🔹 Filter by House
 
 Users can select a house from the dropdown to filter characters.
 
+<img width="1900" height="927" alt="image" src="https://github.com/user-attachments/assets/abe5e92c-863d-4929-96db-3e6cd87445a5" />
+
+
 ### 🔹 Character Details
 
 Clicking a character displays detailed information including:
+
+<img width="1902" height="934" alt="image" src="https://github.com/user-attachments/assets/f0da6cd2-887a-4eb0-b7fa-3608e8bf1548" />
+
 
 * Species
 * House
@@ -103,15 +111,4 @@ http://localhost:4200
 
 ---
 
-## 📌 Notes
 
-* The application uses Angular standalone components (no NgModules).
-* API calls are handled through a dedicated Angular service.
-* UI updates dynamically using Angular Signals.
-* Some characters may not belong to any house and are handled appropriately.
-
----
-
-## 👨‍💻 Author
-
-Developed by: **Andrei Gania**
