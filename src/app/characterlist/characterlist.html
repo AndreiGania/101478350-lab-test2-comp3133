@@ -1,0 +1,17 @@
+<h2>Harry Potter Characters</h2>
+
+<app-characterfilter (houseSelected)="filterByHouse($event)"></app-characterfilter>
+<app-characterdetails [character]="selectedCharacter"></app-characterdetails>
+
+<div class="character-grid">
+  <div class="character-card" *ngFor="let character of characters" (click)="viewDetails(character.id)">
+    <img
+      *ngIf="character.image"
+      [src]="character.image"
+      [alt]="character.name"
+    />
+
+    <h3>{{ character.name }}</h3>
+    <p><strong>House:</strong> {{ character.house || 'No House' }}</p>
+  </div>
+</div>

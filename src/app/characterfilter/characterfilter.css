@@ -1,0 +1,15 @@
+.filter-box {
+  text-align: center;
+  margin: 20px 0;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}

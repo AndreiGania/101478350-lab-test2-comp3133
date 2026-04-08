@@ -1,0 +1,10 @@
+<div class="filter-box">
+  <label for="house">Filter by House:</label>
+
+  <select id="house" [(ngModel)]="selectedHouse" (change)="onHouseChange()">
+    <option value="">All Houses</option>
+    <option *ngFor="let house of houses" [value]="house">
+      {{ house }}
+    </option>
+  </select>
+</div>

@@ -1,0 +1,21 @@
+<div *ngIf="character" class="details-card">
+  <h2>{{ character.name }}</h2>
+
+  <img
+    *ngIf="character.image"
+    [src]="character.image"
+    [alt]="character.name"
+  />
+
+  <p><strong>Species:</strong> {{ character.species || 'N/A' }}</p>
+  <p><strong>House:</strong> {{ character.house || 'No House' }}</p>
+  <p><strong>Wizard:</strong> {{ character.wizard ? 'Yes' : 'No' }}</p>
+  <p><strong>Ancestry:</strong> {{ character.ancestry || 'N/A' }}</p>
+
+  <h3>Wand</h3>
+  <p><strong>Wood:</strong> {{ character.wand?.wood || 'N/A' }}</p>
+  <p><strong>Core:</strong> {{ character.wand?.core || 'N/A' }}</p>
+  <p><strong>Length:</strong> {{ character.wand?.length || 'N/A' }}</p>
+
+  <p><strong>Actor:</strong> {{ character.actor || 'N/A' }}</p>
+</div>
